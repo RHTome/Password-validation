@@ -4,12 +4,13 @@
 // Engineer: 
 // 
 // Create Date:    20:32:28 02/18/2019 
-// Design Name: 
+// Design Name:    code_lock
 // Module Name:    keyCheck 
 // Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
+// Target Devices: xc6slx150-3fgg484
+// Tool versions:  ISE 14.7
+// Description: The keyCheck module is used to confirm which button  
+// is pressed and then output the value represented by the button. 
 //
 // Dependencies: 
 //
