@@ -4,11 +4,11 @@
 // Engineer: 
 // 
 // Create Date:    16:05:45 01/18/2019 
-// Design Name: 
+// Design Name:    code_lock
 // Module Name:    codeInput 
 // Project Name: 
-// Target Devices: 
-// Tool versions: 
+// Target Devices: xc6slx150-3fgg484
+// Tool versions:  ISE 14.7
 // Description: 
 //
 // Dependencies: 
