@@ -76,14 +76,14 @@ begin
 					state <= 1;
 				else state<=0;
 			end
-		1: begin
+		1:	begin
 				if (waitCnt >= 2) begin //Wait several cycles for keyValue to be ready
 					waitCnt <= 0;
 					state<=2;
 				end
 				else waitCnt <= waitCnt + 1'b1;
 			end
-		2: begin
+		2:	begin
 				if (codeSet==1) begin
 					CSRam[newCodeCnt]<=keyValue;
 					newCodeCnt <= newCodeCnt + 1'b1;
@@ -98,7 +98,7 @@ begin
 				state<=0;
 			end
 		endcase
-		//Ê±ÖÓ±ßÑØ´¥·¢Ë÷ÒýÅÐ¶Ï
+		
 		if(newCodeCnt==6) begin
 			newCodeCnt<=0;
 			codeSet<=0;         //End of password setting
