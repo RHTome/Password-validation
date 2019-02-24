@@ -105,35 +105,35 @@ always @(posedge clk or negedge n_rst) begin
 			end
 
         3:
-				begin   
-				//delay 1ms
-					if (cnt >= 50-1) begin
-						cnt <= 0;
-						if(row[3:0]!=4'b1111) begin 
-							state<=5;
-						end
-						else  begin 
-							state<=4;
-							col[3:0]<=4'b0111;//scan column 4.
-						end
+			begin   
+			//delay 1ms
+				if (cnt >= 50-1) begin
+					cnt <= 0;
+					if(row[3:0]!=4'b1111) begin 
+						state<=5;
 					end
-					else cnt <= cnt + 1'b1;								
+					else  begin 
+						state<=4;
+						col[3:0]<=4'b0111;//scan column 4.
+					end
 				end
+				else cnt <= cnt + 1'b1;								
+			end
 
 	    4:
-				begin   
-				//delay 1ms
-					if (cnt >= 50-1) begin
-						cnt <= 0;
-						if(row[3:0]!=4'b1111) begin 
-							state<=5;
-						end
-						else  begin 
-							state<=0;//maybe it's a bounce appears in a tiny time.
-						end
+			begin   
+			//delay 1ms
+				if (cnt >= 50-1) begin
+					cnt <= 0;
+					if(row[3:0]!=4'b1111) begin 
+						state<=5;
 					end
-					else cnt <= cnt + 1'b1;								
-				end				
+					else  begin 
+						state<=0;//maybe it's a bounce appears in a tiny time.
+					end
+				end
+				else cnt <= cnt + 1'b1;								
+			end				
 
 	    5:
 	        begin  
