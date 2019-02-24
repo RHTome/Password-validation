@@ -1,0 +1,64 @@
+NET "clk"            LOC = "J1";
+NET "n_rst"          LOC = "U3";
+NET "row1"     LOC = "Y2";
+NET "row2"     LOC = "Y1";
+NET "row3"     LOC = "V2";
+NET "row4"     LOC = "W1";
+NET "col1"     LOC = "T4";
+NET "col2"     LOC = "V3";
+NET "col3"     LOC = "U4";
+NET "col4"     LOC = "W3";
+NET "codeSet_t" LOC = "T2";
+#NET "row1" CLOCK_DEDICATED_ROUTE = FALSE;		
+NET "keySured"  LOC = "A8";# FPGA_LED3,led3
+NET "ledSet"  LOC = "B8";  # FPGA_LED2,led2
+NET "ledFinish" LOC = "F9";# FPGA_LED1,led1
+NET "ledSuccess" LOC = "G8";# FPGA_LEDR,led8
+
+
+
+#NET "u9sw6_ram_en" LOC = "N1";# FPGA_SW5 
+#NET "u9sw5_r_en"   LOC = "P1"; # FPGA_SW4
+
+#4个地址,U10单元的{sw2,sw1}{8,7}
+#NET "u10_addr<1>"  LOC = "M1"; # FPGA_SW7
+#NET "u10_addr<0>"  LOC = "M2"; # FPGA_SW6
+#4位数据输入U10单元的{sw6,sw5,sw4,sw3}{12,11,10,9}
+#NET "data_in<3>"   LOC = "K2"; # FPGA_SW11
+#NET "data_in<2>"   LOC = "K1"; # FPGA_SW10
+#NET "data_in<1>"   LOC = "L1"; # FPGA_SW9
+#NET "data_in<0>"   LOC = "L3"; # FPGA_SW8
+#最右边4个led：{led13,led1,led2,led3}
+#NET "data_out_led<3>"  LOC = "C10"; # FPGA_LED12,led13
+#NET "data_out_led<2>"  LOC = "F9"; # FPGA_LED1,led1
+#NET "data_out_led<1>"  LOC = "B8"; # FPGA_LED2,led2
+#NET "data_out_led<0>"  LOC = "A8"; # FPGA_LED3,led3
+
+
+
+#//选择FPGA_NUM1 7段数码管的扫描位
+#NET "num4_scan_select<0>"	LOC = "M6";	#FPGA_NUM_CSn1
+#NET "num4_scan_select<1>"	LOC = "M5"; #FPGA_NUM_CSn0
+#NET "num4_scan_select<2>"	LOC = "G3";	#FPGA_NUM_CSn3
+#NET "num4_scan_select<3>"	LOC = "L4"; #FPGA_NUM_CSn2
+#NET "num4_seg7<7>"  LOC = "K3";#DP
+#NET "num4_seg7<6>"  LOC = "M8";#G
+#NET "num4_seg7<5>"  LOC = "H3";#F
+#NET "num4_seg7<4>"  LOC = "G6";#E
+#NET "num4_seg7<3>"  LOC = "G4";#D
+#NET "num4_seg7<2>"  LOC = "H4";#C
+#NET "num4_seg7<1>"  LOC = "K6";#B
+#NET "num4_seg7<0>"  LOC = "J6";#A
+#
+#NET "num2_scan_select<0>"	LOC = "C4";		#FPGA_NUM_CSn5
+#NET "num2_scan_select<1>"	LOC = "F5";	#FPGA_NUM_CSn4
+#NET "num2_seg7<7>"  LOC = "E3";
+#NET "num2_seg7<6>"  LOC = "F8";
+#NET "num2_seg7<5>"  LOC = "C3";
+#NET "num2_seg7<4>"  LOC = "E6";
+#NET "num2_seg7<3>"  LOC = "D5";
+#NET "num2_seg7<2>"  LOC = "E5";
+#NET "num2_seg7<1>"  LOC = "E4";
+#NET "num2_seg7<0>"  LOC = "D3";
+
+
